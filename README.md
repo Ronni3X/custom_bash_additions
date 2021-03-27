@@ -4,7 +4,7 @@ useful bash customizations
 # customized up directory completion
 added the following lines to the _cd completion function (almost at the top of the function) within the bash_completion file:
 
-    //catch custom numbered up directory option
+    \#catch custom numbered up directory option
     if [[ $cur =~ ^\.\.[0-9]+$ ]]; then
         local back="../"
         local num=$(echo "$cur" | cut -f 3 -d ".");
