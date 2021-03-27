@@ -7,11 +7,11 @@ added the following lines to the _cd completion function (almost at the top of t
     //catch custom numbered up directory option
     if [[ $cur =~ ^\.\.[0-9]+$ ]]; then
         local back="../"
-	      local num=$(echo "$cur" | cut -f 3 -d ".");
-	      cur=""
-	      for ((l=1;l<=$num;l++)); do cur=$cur$back; done;
-	      _filedir -d
-	      return
+	local num=$(echo "$cur" | cut -f 3 -d ".");
+	cur=""
+	for ((l=1;l<=$num;l++)); do cur=$cur$back; done;
+	_filedir -d
+	return
     fi
 
 This if statement allows you to cd up a specific number of times using the following format:
