@@ -2,7 +2,7 @@
 useful bash customizations
 
 # customized up directory completion
-added the following lines to the _cd completion function (almost at the top of the function):
+added the following lines to the _cd completion function (almost at the top of the function) within the bash_completion file:
 
     //catch custom numbered up directory option
     if [[ $cur =~ ^\.\.[0-9]+$ ]]; then
